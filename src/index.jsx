@@ -1,11 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Login from 'Components/Login'
+import Login from '@Components/Login';
 
-//<div>hello world!</div>
+// <div>hello world!</div>
 
 ReactDOM.render(
   <Login />,
-  document.getElementById('root')
-)
+  document.getElementById('root'),
+);
