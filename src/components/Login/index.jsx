@@ -1,12 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react';
 
-class Login extends Component {
-  render() {
-    return [
-      <div key="username"><label htmlFor="username">Username<input type="text" id="username" /></label></div>,
-      <div key="password"><label htmlFor="password">Password<input type="text" id="password" /></label></div>,
-    ]
-  }
-}
+const Login = () => (
+  [
+    <div key="username"><label htmlFor="username">Username<input type="text" id="username" /></label></div>,
+    <div key="password"><label htmlFor="password">Password<input type="text" id="password" /></label></div>,
+  ]
+);
 
-export default Login
+export default Login;
+

@@ -19,17 +19,20 @@
     "jest": true
   },
   "globals": {
-    "@Components": true
+    "@": true
   },
   "rules": {
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": [ "error", {
       "ignore": [
-        "@Utils/",
-        "@Styles/",
-        "@Components/"
+        "@"
       ]
+    }],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [],
+      "specialLink": [ "hrefLeft", "hrefRight" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }]
   }
 }
