@@ -10,8 +10,8 @@ module.exports = {
     vendor: ['react', 'react-dom']
   },
   output: {
-    filename: '[name].[chunkhash].bundle.js',
-    chunkFilename: '[name].[chunkhash].chunk.js',
+    filename: '[name].bundle.[chunkhash].js',
+    chunkFilename: '[name].chunk.[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {

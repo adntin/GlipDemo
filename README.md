@@ -17,3 +17,9 @@ webpack
   代码分离
   tree shaking
   缓存处理
+
+
+
+babel
+"transform-class-properties", // class static proerty
+"syntax-dynamic-import" // code splitting dynamic import

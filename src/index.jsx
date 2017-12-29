@@ -1,17 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-// import Async from '@/components/Async'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-// const Home = import(/* webpackChunkName: "home" */ 'Components/Home')
-import Home from '@/components/Home'
-import About from '@/components/About'
-// const Home = () => <Async load={ import('./components/Home') } />
-// const Home = asyncComponent(() => import('@/components/Home').then(module => module.default))
+// import Async from '@/components/Async2'
+
+import Loadable from 'react-loadable';
+import Loading from '@/components/Loading';
+
+// import Home from '@/components/Home'
+// import About from '@/components/About'
+
+// const Home = () => <Async load={ import(/* webpackChunkName: "home" */'@/components/Home') } />
+// const About = () => <Async load={ import(/* webpackChunkName: "about" */'@/components/About') } />
+
+const Home = Loadable({
+  loader: () => import(/* webpackChunkName: "home" */'@/components/Home'),
+  loading: Loading,
+})
+const About = Loadable({
+  loader: () => import(/* webpackChunkName: "about" */'@/components/About'),
+  loading: Loading,
+})
 
 const APP = () => (
   <Router>
