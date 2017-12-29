@@ -11,6 +11,7 @@ const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */'@/components/About'),
   loading: Loading,
 });
+
 const NoFound = Loadable({
   loader: () => import(/* webpackChunkName: "noFound" */'@/components/NoFound'),
   loading: Loading,
