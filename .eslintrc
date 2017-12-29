@@ -19,7 +19,6 @@
     "jest": true
   },
   "globals": {
-    "AMap": true,
     "@Components": true
   },
   "rules": {
