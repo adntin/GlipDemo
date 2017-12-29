@@ -5,10 +5,13 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import Async from '@/components/Async'
 
 // const Home = import(/* webpackChunkName: "home" */ 'Components/Home')
-import Home from '@/Components/Home'
-import About from '@/Components/About'
+import Home from '@/components/Home'
+import About from '@/components/About'
+// const Home = () => <Async load={ import('./components/Home') } />
+// const Home = asyncComponent(() => import('@/components/Home').then(module => module.default))
 
 const APP = () => (
   <Router>
