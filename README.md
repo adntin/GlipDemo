@@ -20,6 +20,6 @@ webpack
 
 
 
-babel
+# babel
 "transform-class-properties", // class static proerty
 "syntax-dynamic-import" // code splitting dynamic import

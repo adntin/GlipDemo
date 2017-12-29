@@ -1,41 +1,39 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
-// import Async from '@/components/Async2'
+import { BrowserRouter as Router, Route, NavLink, Link, Switch } from 'react-router-dom'
 
 import Loadable from 'react-loadable';
 import Loading from '@/components/Loading';
 
-// import Home from '@/components/Home'
-// import About from '@/components/About'
-
-// const Home = () => <Async load={ import(/* webpackChunkName: "home" */'@/components/Home') } />
-// const About = () => <Async load={ import(/* webpackChunkName: "about" */'@/components/About') } />
-
-const Home = Loadable({
-  loader: () => import(/* webpackChunkName: "home" */'@/components/Home'),
-  loading: Loading,
-});
+import Home from '@/components/Home'
 const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */'@/components/About'),
   loading: Loading,
 });
+const NoFound = Loadable({
+  loader: () => import(/* webpackChunkName: "noFound" */'@/components/NoFound'),
+  loading: Loading,
+});
 
-const APP = () => (
+const App = () => (
   <Router>
     <div>
       <ul>
         <li><Link to="/">home</Link></li>
         <li><Link to="/about">about</Link></li>
+        <li><Link to="/abc">no found</Link></li>
       </ul>
-      <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
+      <NavLink to='/about'>about</NavLink>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route component={NoFound}/>
+      </Switch>
     </div>
   </Router>
 )
 
 ReactDOM.render(
-  <APP />,
+  <App />,
   document.getElementById('root')
 )
