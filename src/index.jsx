@@ -7,21 +7,15 @@ import {
 } from 'react-router-dom'
 
 // const Home = import(/* webpackChunkName: "home" */ 'Components/Home')
-
-import Home from 'Components/Home'
-
-const About = () => (
-  <div>
-    <h2>关于</h2>
-  </div>
-)
+import Home from '@/Components/Home'
+import About from '@/Components/About'
 
 const APP = () => (
   <Router>
     <div>
       <ul>
-        <li><Link to="/">首页</Link></li>
-        <li><Link to="/about">关于</Link></li>
+        <li><Link to="/">home</Link></li>
+        <li><Link to="/about">about</Link></li>
       </ul>
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>
